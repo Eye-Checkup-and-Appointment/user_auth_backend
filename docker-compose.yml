@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  gradle_check:
+    image: gradle_check:latest
+    ports:
+      - "8080:8080"
+    restart: always
+    container_name: gradle_app
+    build:
+      context: ./
+      dockerfile: Dockerfile
